@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Work;
+namespace Select;
 
 /**
- * The configuration provider for the Work module
+ * The configuration provider for the Select module
  *
  * @see https://docs.laminas.dev/laminas-component-installer/
  */
@@ -33,8 +33,7 @@ class ConfigProvider
         return [
             'invokables' => [],
             'factories'  => [
-                //pripoj dependencies
-                Model\Table\UsersTable::class => Model\Table\UsersTableFactory::class,
+                Model\Table\SelectModel::class => Model\Table\SelectModelFactory::class,
 
             ],
         ];
@@ -47,7 +46,7 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'work'    => [__DIR__ . '/../templates/'],
+                'select'    => [__DIR__ . '/../templates/'],
             ],
         ];
     }

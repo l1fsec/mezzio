@@ -63,7 +63,7 @@ class FormHandler implements MiddlewareInterface
 
                 if ($response->getStatusCode() !== 302) {
                     // ! tady byl predtim Flash ale ten hazi chybu **Call to a member function flash() on null** prozatim tu nebude
-                    return new RedirectResponse('/post');
+                    return new RedirectResponse('/login');
                 }
 
                 return $response;

@@ -72,7 +72,8 @@
             "App\\": "src/App/src/",
             "Test\\": "src/Test/src/",
             "Work\\": "src/Work/src/",
-            "Worker\\": "src/Worker/src/"
+            "Worker\\": "src/Worker/src/",
+            "Select\\": "src/Select/src/"
         }
     },
     "autoload-dev": {

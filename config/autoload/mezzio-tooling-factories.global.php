@@ -13,8 +13,10 @@ declare(strict_types=1);
 return [
     'dependencies' => [
         'factories' => [
+            Select\Handler\SelectHandler::class => Select\Handler\SelectHandlerFactory::class,
             Test\Handler\PostHandler::class => Test\Handler\PostHandlerFactory::class,
             Work\Handler\FormHandler::class => Work\Handler\FormHandlerFactory::class,
+            Work\Handler\GetFetchHandler::class => Work\Handler\GetFetchHandlerFactory::class,
             Worker\Handler\FormHandler::class => Worker\Handler\FormHandlerFactory::class,
         ],
     ],

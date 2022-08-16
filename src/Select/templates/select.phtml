@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Textarea</th>
+            <th scope="col">Radio</th>
+            <th scope="col">Datetime</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <th scope="row">
+            <?php foreach ($userList as $post) : ?>
+                <tr>
+                    <td><?= $post['id'] ?></td>
+                    <td><?= $post['name'] ?></td>
+                    <td><?= $post['surname'] ?></td>
+                    <td><?= $post['password'] ?></td>
+                    <td><?= $post['textarea'] ?></td>
+                    <td><?= $post['radio'] ?></td>
+                    <td><?= $post['datetime'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </th>
+    </tbody>
+</table>

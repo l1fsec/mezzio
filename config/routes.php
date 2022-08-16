@@ -42,4 +42,5 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
     $app->route('/post', Test\Handler\PostHandler::class, ['GET', 'POST'], 'page.post');
     $app->route('/form', Work\Handler\FormHandler::class, ['GET', 'POST'], 'page.form');
+    $app->route('/select', Select\Handler\SelectHandler::class, ['GET', 'POST'], 'page.select');
 };
