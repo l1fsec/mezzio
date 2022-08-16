@@ -11,6 +11,7 @@ return [
         // key is the alias name, the value is the service to which it points.
         'aliases' => [
             // Fully\Qualified\ClassOrInterfaceName::class => Fully\Qualified\ClassName::class,
+            Laminas\Db\Adapter\Adapter::class => Laminas\Db\Adapter\AdapterInterface::class,
         ],
         // Use 'invokables' for constructor-less services, or services that do
         // not require arguments to the constructor. Map a service name to the
@@ -21,6 +22,16 @@ return [
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories' => [
             // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
+             Laminas\Db\AdapterInterface::class => Laminas\Db\Adapter\AdapterServiceFactory::class,
+        ],
+    ],
+    'db' => [
+        'driver' => 'Pdo',
+        'dsn' => 'mysql:dbname=test;host=localhost',
+        'username' => 'testuser',
+        'password' => 'neconecotajnyho',
+        'driver_options' => [
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ],
     ],
 ];

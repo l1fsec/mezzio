@@ -1,0 +1,115 @@
+<?php
+
+/**
+ * @author     Jan Pliska
+ * 
+ */
+$title = $this->translate('Join');
+$this->headMeta()->appendName('keywords', 'Signup, Join, Create');
+$this->headMeta()->appendName('description', 'Signup, Join, Create');
+$this->headTitle($this->escapeHtml($title));
+
+$form = $this->form;
+$form->setAttribute('action', $this->url('page.form'));
+$form->prepare();
+
+?>
+
+<div class="container">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-6 shadow-sm">
+            <h2 class="pt-2 text-center">
+                <span class="text-muted">
+                    <?= $this->translate('Create new account') ?>
+                </span>
+            </h2>
+            <?= $this->form()->openTag($form) ?>
+
+            <div class="mb-3">
+                <?= $this->formLabel($form->get('name')); ?>
+                <div class="input-group">
+                    <?= $this->formText($form->get('name')); ?>
+                </div>
+                <div class="text-danger">
+                    <?= $this->formElementErrors($form->get('name')); ?>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <?= $this->formLabel($form->get('surname')); ?>
+                <div class="input-group">
+                    <?= $this->formText($form->get('surname')); ?>
+                </div>
+                <div class="text-danger">
+                    <?= $this->formElementErrors($form->get('surname')); ?>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formLabel($form->get('email')); ?>
+                    <div class="input-group">
+                        <?= $this->formEmail($form->get('email')); ?>
+                    </div>
+                    <div class="text-danger">
+                        <?= $this->formElementErrors($form->get('email')); ?>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formLabel($form->get('password')); ?>
+                    <div class="input-group">
+                        <?= $this->formPassword($form->get('password')); ?>
+                    </div>
+                    <div class="text-danger">
+                        <?= $this->formElementErrors($form->get('password')); ?>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formLabel($form->get('confirm_password')); ?>
+                    <div class="input-group">
+                        <?= $this->formPassword($form->get('confirm_password')); ?>
+                    </div>
+                    <div class="text-danger">
+                        <?= $this->formElementErrors($form->get('confirm_password')); ?>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formLabel($form->get('textarea')); ?>
+                    <div class="input-group">
+                        <?= $this->formTextarea($form->get('textarea')); ?>
+                    </div>
+                    <div class="text-danger">
+                        <?= $this->formElementErrors($form->get('textarea')); ?>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formLabel($form->get('radio')); ?>
+                    <div class="input-group">
+                        <?= $this->formRadio($form->get('radio')); ?>
+                    </div>
+                    <div class="text-danger">
+                        <?= $this->formElementErrors($form->get('radio')); ?>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formLabel($form->get('range')); ?>
+                    <div class="input-group">
+                        <?= $this->formRange($form->get('range')); ?>
+                    </div>
+                    <div class="text-danger">
+                        <?= $this->formElementErrors($form->get('range')); ?>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <?= $this->formSubmit($form->get('create_data')); ?>
+                </div>
+
+
+
+                <?= $this->form()->closeTag(); ?>
+
+            </div>
